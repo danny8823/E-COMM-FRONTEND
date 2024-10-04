@@ -11,7 +11,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(getTotals())
-  },[cart.cartTotalAmount])
+  })
 
   const formatter = new Intl.NumberFormat('en-US',{
     style: 'currency',

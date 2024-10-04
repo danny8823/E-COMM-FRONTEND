@@ -1,0 +1,17 @@
+.user-card-container {
+    width: 100%;
+    min-height:100vh;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    width: 30%;
+    min-height: 100vh;
+}
+
+.user-name {
+    font-size: 60px;
+}

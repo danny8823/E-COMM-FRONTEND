@@ -1,5 +1,5 @@
 import React from 'react'
-import { Formik, useFormik } from 'formik'
+import { useFormik } from 'formik'
 import { useMutation } from '@tanstack/react-query'
 import { updateProfileAPI } from '../../services/userServices'
 import './UpdateProfile.css'

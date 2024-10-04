@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getCart, getTotals } from '../../redux/slice/cartSlice'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { getCart } from '../../redux/slice/cartSlice'
 import { Button } from '@mui/material'
 import './Checkout.css'
 
 const Checkout = () => {
-  const dispatch = useDispatch()
   const cart = useSelector(getCart)
 
   const style = {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button } from '@mui/material'
 import './Cart.css'
@@ -11,7 +11,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(getTotals())
-  },[cart])
+  },[cart.cartTotalAmount])
 
   const formatter = new Intl.NumberFormat('en-US',{
     style: 'currency',

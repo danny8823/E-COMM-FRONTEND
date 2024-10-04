@@ -7,7 +7,7 @@ import './SingleProduct.css'
 const SingleProduct = () => {
   const {id} = useParams()
   
-  const {data, isError, isLoading, isFetched, error} = useQuery({
+  const {data, isError, isLoading} = useQuery({
     queryFn: ()=>listSingleItemApi(id),
     queryKey: ['list-single-item',id]
   })
@@ -16,6 +16,8 @@ const SingleProduct = () => {
   return (
     <div className = 'item-container'>
       <div className = 'item-card'>
+        {isError && <h1>Error loading data</h1>}
+        {isLoading && <h1>Loading...</h1>}
         <h1>{data?.itemName}</h1>
         <br/><br/><br/>
         <img src = {data?.image} alt = 'item-image'/>

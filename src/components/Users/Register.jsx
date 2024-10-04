@@ -1,14 +1,12 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import {useMutation} from '@tanstack/react-query'
-import {useDispatch} from 'react-redux'
 import { registerAPI } from '../../services/userServices';
 import './Register.css'
 
 const Register = () => {
-  const dispatch = useDispatch()
 
-  const {mutateAsync, isPending, isError, error ,isSuccess} = useMutation({
+  const {mutateAsync, isPending, isError ,isSuccess} = useMutation({
     mutationFn: registerAPI,
     mutationKey: ['register']
   })

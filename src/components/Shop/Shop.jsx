@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Shop.css'
 import { listItemsApi } from '../../services/itemServices'
 import { useQuery } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { addItem } from '../../redux/slice/cartSlice'
 import { Button } from '@mui/material'
 
@@ -13,7 +13,7 @@ const Shop = () => {
 
   const [category, setCategory] = useState('all')
 
-  const {data:items, isError,isLoading,isFetched,error} = useQuery({
+  const {data:items, isError,isLoading} = useQuery({
     queryFn: ()=>listItemsApi(category),
     queryKey: ['list-items',category]
   })

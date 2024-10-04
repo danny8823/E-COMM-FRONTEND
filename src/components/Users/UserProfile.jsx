@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import './UserProfile.css'
 import UpdatePassword from './UpdatePassword'
 import UpdateProfile from './UpdateProfile'
-import { Link } from 'react-router-dom'
 import { Button, Modal,Box } from '@mui/material'
 
 
